@@ -205,4 +205,330 @@ footer a:hover{
     color : var(--orange-vif);
     transform: translateY(-3px);
 }
+/* Styles pour la page Contact */
+.contact-container {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    color: var(--violet-doux);
+}
 
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    color: var(--gris-tres-fonce);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--gris-fonce);
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--violet-doux);
+    font-weight: bold;
+}
+
+.social-links-contact {
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-contact {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white !important;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+
+.btn-contact:hover {
+    opacity: 0.8;
+}
+
+/* Styles du formulaire */
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    outline-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .contact-container {
+        margin: 3rem auto;
+    }
+}
+/* Mise à jour du titre Contactez-moi */
+.contact-container h1 {
+    font-size: 3.5rem; /* Plus grand */
+    color: var(--violet-doux);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Soulignement du titre */
+.contact-container h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: var(--violet-doux);
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* Transformation des coordonnées en Card */
+.contact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--violet-doux); /* Petit rappel de couleur */
+}
+
+/* Ajustement pour aligner les deux cartes (Info et Formulaire) */
+.contact-content {
+    align-items: stretch; /* Pour que les deux cartes aient la même hauteur */
+}
+/* ============================================================
+   Styles spécifiques pour la page Projet (Maquette)
+   ============================================================ */
+
+/* 1. Titre principal "Voici Mes Réalisations" */
+main h1.projet-titre { /* Ajoutez la classe .projet-titre à votre h1 */
+    text-align: center;
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 1rem; /* Espace avant le trait */
+    position: relative;
+}
+
+/* Le petit trait violet sous le titre (comme sur la maquette) */
+main h1.projet-titre::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 10px auto 0; /* Centré horizontalement */
+    border-radius: 2px;
+}
+
+/* 2. Grille de projets (Conteneur principal) */
+.projets-grid { /* Ajoutez la classe .projets-grid à votre <section> */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 2rem; /* Espace entre les cartes */
+    max-width: 1200px; /* Largeur maximale de la grille */
+    margin: 4rem auto; /* Centré avec de l'espace en haut/bas */
+    padding: 0 2rem; /* Espace sur les côtés sur petits écrans */
+}
+
+/* 3. La carte projet individuelle (Article) */
+.projet-card { /* Ajoutez la classe .projet-card à chaque <article> */
+    background-color: #fff;
+    border-radius: 15px; /* Coins arrondis */
+    overflow: hidden; /* Pour que l'image suive l'arrondi */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Aligne le contenu verticalement */
+}
+
+/* Effet au survol de la carte */
+.projet-card:hover {
+    transform: translateY(-5px); /* Soulève légèrement la carte */
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.1); /* Ombre plus forte et colorée */
+}
+
+/* 4. Zone Image */
+.projet-image { /* Ajoutez .projet-image au <div> entourant l'<img> */
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour l'image */
+    overflow: hidden;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit la zone sans se déformer */
+    display: block;
+}
+
+/* 5. Zone Détails (Contenu textuel sous l'image) */
+.projet-details { /* Ajoutez .projet-details au <div> contenant h3, p, tags, liens */
+    padding: 1.5rem;
+    flex-grow: 1; /* Pousse les liens vers le bas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espace h3/p en haut, tags/liens en bas */
+}
+
+.projet-details h3 {
+    color: var(--violet-doux);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.projet-details p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* 6. Zone Tags (Technologies) */
+.projet-tags { /* Ajoutez .projet-tags au <div> contenant les <span> */
+    display: flex;
+    flex-wrap: wrap; /* Revient à la ligne si nécessaire */
+    gap: 8px; /* Espace entre les tags */
+    margin-bottom: 1.5rem;
+}
+
+.projet-tags span {
+    background-color: #f0efff; /* Violet très clair */
+    color: var(--violet-doux);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* 7. Zone Liens (Code, Démo) */
+.projet-links { /* Ajoutez .projet-links au <div> contenant les <a> */
+    display: flex;
+    justify-content: space-between; /* Un lien à gauche, un à droite */
+    align-items: center;
+    border-top: 1px solid var(--gris-clair); /* Ligne de séparation */
+    padding-top: 1rem;
+    margin-top: auto; /* Force l'alignement en bas de la carte */
+}
+
+.projet-links a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Espace entre l'icône et le texte */
+    transition: color 0.3s ease;
+}
+
+/* Icônes spécifiques pour GitHub (vous avez déjà l'image dans le HTML) */
+.projet-links a img {
+    width: 18px; /* Taille icône GitHub */
+    height: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Interaction au survol des liens */
+.projet-links a:hover {
+    color: var(--violet-doux);
+}
+
+.projet-links a:hover img {
+    opacity: 1;
+}
+
+/* Cas particulier pour le projet Maquette (icône Design) */
+.projet-links a.design-link { /* Ajoutez la classe .design-link au lien 'Design' */
+    color: #444;
+}
+
+.projet-links a.design-link:hover {
+    color: #000;
+}
+
+
+/* ============================================================
+   Responsive (Adaptation pour mobiles)
+   ============================================================ */
+
+/* Pour les tablettes (2 colonnes) */
+@media (max-width: 992px) {
+    .projets-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Pour les mobiles (1 colonne) */
+@media (max-width: 576px) {
+    .projets-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    main h1.projet-titre {
+        font-size: 2rem;
+    }
+}
